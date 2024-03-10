@@ -1,0 +1,1359 @@
+/*------------------------Header---------------------------*/
+.header-panel {
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0);
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0);
+}
+/*left part*/
+.nn-panel {
+    position: absolute;
+    width: 7%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+/*Left items*/
+.button-nn {
+    top: 0%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    border: rgba(0, 0, 0, 0);
+    outline: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+
+/*right part*/
+.menus {
+   position: absolute;
+   background-color: rgba(0, 0, 0, 0);
+   width: 70%;
+   height: 100%;
+   top: 0%;
+   right: 0%;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+/*right items*/
+.home-button,
+.about-button,
+.services-button,
+.portfolio-button,
+.contact-button {
+    width: 100px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5vh;
+
+    background-color: rgba(0, 0, 0, 0);
+    border: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background-size: 100% 200%; /* Initial background size */
+    transition: background-position 0.5s; /* Transition the background position */
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.contact-button {
+    margin-right: 1vh;
+}
+
+.home-button:hover,
+.about-button:hover,
+.services-button:hover,
+.portfolio-button:hover,
+.contact-button:hover {
+    background-position: 0 100%; /* Move the background position to show the white color */
+}
+.pressed {
+  background-color: white;
+}
+/*nav toggle*/
+.nav__toggle {
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    top: 0%;
+    right: 0%;
+    cursor: pointer;
+
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    display: none;
+  }
+
+  .hamburger {
+    cursor: pointer;
+    z-index: 100;
+}
+
+/*nav-toggle-mobile*/
+.navigation-menu-mobile {
+    position: absolute;
+    width: 150px;
+    height: 90%;
+    top: 10%;
+    right: 0%;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(100%); /* Move menu off-screen initially */
+    transition: transform 0.2s ease;
+    z-index: 1000;
+    display: none
+}
+
+.nav-buttons {
+   position: absolute;
+   top: 0;
+   right: 0;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 100%;
+   height: 40%;
+   background-color: rgba(0, 0, 0, 0);
+}
+
+.mobile-home-button,
+.mobile-about-button,
+.mobile-services-button,
+.mobile-portfolio-button,
+.mobile-contact-button {
+    position: relative;
+    width: 100%;
+    height: 65px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s; /* Apply transition to background-color */
+}
+
+/* Hover effect */
+.mobile-home-button:hover,
+.mobile-about-button:hover,
+.mobile-services-button:hover,
+.mobile-portfolio-button:hover,
+.mobile-contact-button:hover {
+    background-color: white; /* Change background color to white on hover */
+}
+
+/* Pressed effect */
+.mobile-home-button:active,
+.mobile-about-button:active,
+.mobile-services-button:active,
+.mobile-portfolio-button:active,
+.mobile-contact-button:active {
+    background-color: white; /* Change background color to white when pressed */
+}
+
+.active {
+    background-color: white;
+}
+
+
+@media only screen and (max-width: 965px) {
+    .nav__toggle {
+        display: flex;
+    }
+    .navigation-menu-mobile {
+        display: block !important;
+    }
+
+    .menus {
+        display: none;
+    }
+
+    .header-panel {
+        height: 7vh;
+    }
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+/*Always there Panel*/
+.main-container {
+ background-color: aqua;
+ position: absolute;
+ top: 0%;
+ left: 0%;
+ width: 100%;
+ height: 100%;
+ z-index: 0;
+}
+
+/*MAIN-BODY_CONTAINER*/
+.menus-body-container {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+}
+
+/*Right side counter panel*/
+/*Main-left-panel*/
+.menu-updater-panel {
+    position: fixed;
+    width: 70px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+
+    background-color: pink; 
+}
+
+/*Main - item (Adjust animation using margin by 20vh)*/
+.numbers-panel { 
+    position: relative;
+    width: 50px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: green;
+}
+/*numbers panel item*/
+.menu-updater-numbers {
+    font-family: "Verdana Sans-serif", sans-serif;
+    font-size: 60px;
+    background-color: aqua;
+ }
+
+/*BLURRED PANEL*/
+.blurred-panel-holder {
+    position: absolute;
+    width: 50px;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: rgba(0, 0, 0, 0);
+}
+/*Blurred Panel itemS*/
+.blurred-panel-top,
+.blurred-panel-bottom {
+    position: absolute;
+    width: 100%;
+    height: 45%;
+
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(5px); /* Adjust the blur radius as needed */
+
+    z-index: 10;
+}   
+
+.blurred-panel-top {
+    top: 0%;
+    left: 0%;
+}
+
+.blurred-panel-bottom {
+    top: 55%;
+    left: 0%;
+}
+
+/*Right side counter panel*/
+/*Main-right-panel*/
+
+.social-media-panel {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 70px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/*social-panel-items*/
+.pic-holder-panel {
+    position: relative;
+    width: 50px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0)
+}
+
+/*pic items*/
+.social-image {
+  width: auto;
+  height: 40px;
+  border-radius: 100px;
+  transition: transform 0.3s ease;
+}
+
+.youtube-logo {
+    width: auto;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0px;
+  }
+
+  .github-logo {
+    width: auto;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  /*Links Animation Transition*/
+  
+  .social-image:hover {
+    transform: translateX(-10px);
+  }
+
+@media only screen and (max-width: 540px){
+
+    .menu-updater-panel {
+        width: 40px;
+    }
+
+    .numbers-panel { 
+        width: 200px;
+        height: 200px;
+    }
+
+    .social-image {
+        width: auto;
+        height: 20px;
+      }
+      
+    .youtube-logo {
+        width: auto;
+        height: 15px;
+    }
+      
+    .github-logo {
+        width: auto;
+        height: 45px;
+    }
+}
+
+
+  
+/*HOME-MAIN*/
+.home-main {
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgb(0, 0, 0);
+
+    position: absolute;
+    justify-content: center; /* Align items to the left */
+    align-items: center; /* Center the item vertically */
+    flex-wrap: wrap;
+
+    display: flex;
+
+}
+
+/*Right Side*/
+.profile-pic {
+    position: relative;
+    width: 500px;
+    height: auto;
+    margin-left: 20vh;
+    margin-right: 5vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    
+    /*Design style*/
+    background-position: -100px 0; /* Move the background 20px to the right */
+    border-top: 10px solid gray; /* Add top border */
+    border-right: 10px solid gray; /* Add right border */
+
+    /* Convert image to black and white */
+    filter: grayscale(20%);
+
+    /* Create a linear gradient mask for the bottom part */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 2%, rgba(58, 56, 56, 0) 100%);
+}
+
+small {
+    color: rgb(104, 104, 104);
+}
+
+
+
+/*Left Side*/
+.introduction-panel {
+    margin-top: 10%;
+    margin-left: 5%;
+    width: 25%;
+    height: 50%;
+    margin-left: 10%;
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 10vh;
+}
+/*Left Items*/
+.introduction-text {
+    font-family: "Verdana Sans-serif", sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.explore-now {
+  width: 40%;
+  height: 10%;
+  margin-top: 5%;
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 2.5%;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255);
+  /* Design style */
+  background-position: -100px 0; /* Move the background 20px to the right */
+  border-bottom: 7px solid gray; /* Add top border */
+  border-right: 8px solid gray; /* Add right border */
+  animation: fadeThirdInFromBottom 0.5s ease forwards;
+}
+
+.explore-now:hover {
+  transform: translateY(-25%);
+  transition: transform 0.3s ease;
+}
+
+
+p {
+    font-family: Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+
+@media only screen and (max-width: 1178px) {
+  /*Home part*/
+.introduction-panel {
+  margin-top: 10%;
+  width: 80%;
+  height: 30%;
+}
+
+.profile-pic {
+  width: 350px;
+  height: auto;
+  margin-left: 5vh;
+  margin-bottom: 5vh;
+}
+
+.introduction-text {
+  font-size: 20px;
+}
+
+p {
+  font-size: 10px;
+  margin-right: 20vh;
+}
+
+.explore-now {
+  width: 40%;
+  height: 15%;
+  height: 15%;
+  font-size: 10px;
+}
+
+.pic-holder-panel {
+    width: 30px;
+    height: 300px;
+}
+
+}
+
+@media only screen and (max-width: 534px) {
+    .profile-pic {
+        width: 350px;
+        height: auto;
+        margin-left: 5vh;
+      }
+
+      p{
+        margin-right: 4vh;
+      }
+}
+
+@media only screen and (max-width: 465px) {
+    .profile-pic {
+        width: 200px;
+        height: auto;
+        margin-left: 5vh;
+        margin-bottom: 10vh;
+      }
+}
+
+/*-------------------------------------------ABOUT-MAIN----------------------------------------------------*/
+.about-main {
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgb(0, 0, 0);
+
+    position: absolute;
+    display: flex;
+    justify-content: center; /* Align items to the left */
+    align-items: center; /* Center the item vertically */
+    flex-wrap: wrap;
+    display: none;
+}
+
+/*Left pic*/
+.about-picture {
+    position: relative;
+    width: auto;
+    height: 70%;
+    margin-top: 2vh;
+    border-radius: 20px;
+    
+    /*Design style*/
+    background-position: -100px 0; /* Move the background 20px to the right */
+    border-top: 10px solid rgb(255, 255, 255); /* Add top border */
+    border-left: 10px solid rgb(255, 255, 255); /* Add right border */
+  } 
+  
+  
+  /*Right Panel*/
+  .about-info-panel {
+    position: relative;
+    width: 40%;
+    height: 70%;
+    margin-left: 5%;
+    border-radius: 20px;
+    margin-right: 10vh;
+  
+    background: rgb(255, 255, 255);
+    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+  }
+  
+  .about-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 5vh;
+    margin-top: 5vh;
+    margin-left: 2vh;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+  }
+  
+  .about-info {
+    margin-left: 2vh;
+    margin-right: 2vh;
+    border-radius: 20px;
+    font-size: 3vh;
+    color: rgb(0, 0, 0);
+  }
+  
+  @media only screen and (max-width: 1234px){
+    .about-picture {
+       height: 50%;
+    }
+  
+    .about-info-panel {
+      height: 60%;
+    }
+  
+    .about-info {
+      font-size: 2.3vh;
+    }
+}
+
+
+  
+    @media only screen and (max-width: 945px){
+      .about-picture {
+        height: 50%;
+     }
+   
+     .about-info-panel {
+       margin-top: 2vh;
+       width: 90%;
+       height: 70%;
+       height: 35vh;
+     }
+  
+     .about-title {
+      font-size: 2.5vh;
+     }
+   
+     .about-info {
+       font-size: 1.5vh;    
+     }
+}
+
+@media only screen and (max-width: 535px){
+    .about-picture {
+        margin-top: 10vh;
+        margin-right: 5vh;
+        height: 30%;
+     }
+
+     .about-info-panel {
+        width: 90%;
+        height: 40%;
+        margin-right: 6vh;
+      }
+
+}
+    
+/*--------------------------------------------------------SERVICES-MAIN---------------------------------------------------------*/
+
+.services-main {
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgb(0, 0, 0);
+
+    position: absolute;
+    justify-content: center; /* Align items to the left */
+    align-items: center; /* Center the item vertically */
+    flex-wrap: wrap;
+    display: flex;
+    
+   display: none;
+}
+
+/*Top panel*/
+.services {
+    position: relative;
+    width: 90%;
+    height: 30%;
+    border-radius: 10px;
+    margin-top: 10vh;
+    margin-left: 5vh;
+  
+    background-color: rgb(0, 0, 0);
+    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+  }
+  /*top parts*/
+  
+  .services-title {
+    font-family: Andale Mono, monospace;
+    font-size: 6vh;
+    color: rgb(255, 255, 255);
+    margin-left: 2vh;
+  }
+  
+  .services-info {
+    margin-left: 2vh;
+    font-size: 2vh;
+    margin-bottom: 2vh;
+  }
+  /*center of three bottom panels*/
+  .services-titles {
+    font-family: Andale Mono, monospace;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    width: 80%;
+    font-size: 23px;
+    margin-top: 1vh;
+  }
+  
+  .services-info-by-title{
+    margin-left: 2vh;
+    margin-right: 2vh;
+    text-align: center;
+  }
+  
+  /*Bottom panel*/
+  .myservices-panel {
+    position: relative;
+    width: 90%;
+    height: 50%;
+    background-color: rgb(0, 0, 0);
+    margin-top: 2vh;
+    margin-left: 4vh;
+    margin-bottom: 2vh;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .service-webdev,
+  .service-software,
+  .service-graphic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: rgb(0, 0, 0);
+    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+  }
+  
+  /*bottom part*/
+  .service-webdev{
+    position: relative;
+    width: 27%;
+    height: 85%;
+    margin-left: 0%;
+  }
+  
+  .service-software,
+  .service-graphic {
+    position: relative;
+    width: 27%;
+    height: 85%;
+    margin-left: 3%;
+  }
+  
+  .circle-buttons-panel {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background-color: rgb(0, 0, 0);
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    z-index: 0;
+  }
+  
+  .circle-btn-web,
+  .circle-btn-soft,
+  .circle-btn-graphic{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    
+  }
+  .circle-btn-soft,
+  .circle-btn-graphic{
+    margin-left: 5%;
+  }
+  
+  @media only screen and (max-width: 1121px){
+    .services-title{
+     font-size: 3vh;
+    }
+   .services-info {
+    font-size: 1.6vh;
+    }
+  
+    .services-titles {
+      margin-top: 1vh;
+      font-size: 18px; 
+    }
+    
+    .services-info-by-title{
+      font-size: 1.8vh;
+      margin-right: 2vh;
+    }
+  }
+  @media only screen and (max-width: 594px){
+    .services {
+        margin-left: 2vh;
+      }
+
+      .services-info {
+        font-size: 1vh;
+      }
+  }
+  @media only screen and (max-width: 931px){
+  
+  .service-software,
+  .service-graphic {
+     display: none;
+  }
+  
+  .circle-buttons-panel {
+    display: flex;
+  }
+  
+  .service-webdev {
+    width: 90%;
+  }
+  
+  .services-info-by-title{
+    font-size: 2vh;
+    margin-bottom: 10vh;
+  }
+  }
+  
+  @media only screen and (max-width: 485px){
+
+    .myservices-panel {
+        margin-top: 2vh;
+        margin-left: 1vh;
+        margin-bottom: 0vh;
+    }
+    .services-info {
+      font-size: 1.3vh;
+    }
+  }
+  
+  @media only screen and (max-width: 365px){
+  
+    .services-info-by-title {
+      font-size: 1.6vh;
+    }
+
+    .myservices-panel {
+        height: 50%;
+      }
+    
+  }
+  
+
+  /*-------------------------------------------------------PORTFOLIO -----------------------------------------------------------*/
+ /*Portfolio Main*/
+  .portfolio-main {
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgb(0, 0, 0);
+
+    position: absolute;
+    justify-content: center; /* Align items to the left */
+    align-items: center; /* Center the item vertically */
+    flex-wrap: wrap;
+
+    display: none;
+}
+
+/*Top Panel*/
+
+.portfolio-title-panel {
+    position: relative;
+    margin-top: 12vh;
+    margin-left: 7vh;
+    margin-right: 5vh;
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    background-color: rgb(255, 255, 255);
+    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+}
+
+.portfolio-title {
+    font-family: Andale Mono, monospace;
+    font-size: 5vh;
+    font-weight: bold;
+    margin-left: 2vh;
+}
+
+
+/*------Bottom Panel----*/
+/*Bottom Main*/
+.portfolio-info-panel {
+    width: 88%;
+    height: 70%;
+    margin-left: 2.5%;
+    margin-top: 2vh;
+    
+    background-color: rgb(255, 255, 255);
+    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*botoom main item panels*/
+.education-panel,
+.objective-panel {
+    width: 40%;
+    height: 50vh;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+}
+
+.education-panel {
+    margin-left: 5vh;
+}
+
+.information-titles {
+    font-family: Andale Mono, monospace;
+    margin-left: 2vh;
+    font-size: 5vh;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+.info-sentences {
+    font-family: Andale Mono, monospace;
+    font-size: 2vh;
+    color: rgb(255, 255, 255);
+   text-align: center;
+}
+
+@media only screen and (max-width: 755px) {
+
+    .portfolio-title-panel {
+       margin-left: 5vh;
+    }
+    .portfolio-title {
+        font-size: 3vh;
+    }
+    .objective-panel,
+    .education-panel {
+        width: 90%;
+        height: 30vh;
+    }
+
+    .education-panel {
+        margin-left: 1vh;
+    }
+
+    .information-titles  {
+        font-size: 2vh;
+    }
+    
+    .info-sentences {
+        font-size: 1.5vh;
+    }
+
+}
+
+  /*-------------------------------------------------------CONTACT -----------------------------------------------------------*/
+ /*Contact Main*/
+ .contact-main {
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgb(0, 0, 0);
+
+    position: absolute;
+    justify-content: center; /* Align items to the left */
+    align-items: center; /* Center the item vertically */
+    flex-wrap: wrap;
+
+    display: none;
+}
+
+/*Top panel*/
+.contact-ttle-panel {
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 12vh;
+    margin-left: 5%;
+  
+    background-color: rgb(255, 255, 255);
+    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+    
+  }
+  
+  .contact-title {
+    font-weight: bold;
+    font-size: 6vh;
+    margin-left: 2vh;
+    color: rgb(0, 0, 0);
+    font-family: Andale Mono, monospace;
+  }
+  
+  /*All bottom panel*/
+  .contact-info-panel {
+    position: relative;
+    width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 2vh;
+    margin-left: 5%;
+  }
+  /*left bottom panel*/
+  .information-contact-panel {
+    position: relative;
+    width: 40%;
+    height: 90%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+
+    background-color: rgb(255, 255, 255);
+    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+    }
+
+    .contact-info {
+        position: relative;
+        font-size: 3vh;
+        font-family: Andale Mono, monospace;
+        margin-left: 20px;      
+    }
+    
+  /*right bottom panel*/
+  .textfields-panel {
+    position: relative;
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 3vh;
+    margin-top: 2vh;
+
+    background-color: rgb(255, 255, 255);
+    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+  }
+  
+  /*right bottom center parts*/
+  .textfields{
+    margin-left: 10vh;
+    width: 45%;
+    height: 40px;
+    border-radius: 5px;
+
+    background-color: rgb(255, 255, 255);
+    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+  }
+  
+  /*mid most panel*/
+  .details-panel {
+    margin-left: 5vh;
+    width: auto;
+    height: auto;
+  }
+  
+  .small-field {
+    width: 200px;
+    height: 40px;
+    font-size: 17px;
+    margin-left: 5vh;
+
+    background-color: rgb(255, 255, 255);
+    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+  }
+  /*most bottom part*/
+  
+  .tarea-size {
+    width: 80%;
+    height: 30%;
+    margin-left: 10vh;
+    border-radius: 5px;
+    margin-right: 10vh;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+  }
+
+  /*Button panel*/
+  .send-button {
+    margin-left: 10vh;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+    border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+  }
+
+  
+  @media only screen and (max-width: 1520px){
+    .information-contact-panel {
+      width: 80%;
+      height: 30%;
+      }
+      .contact-info-panel {
+        margin-bottom: 10vh;
+      }
+  
+      .textfields-panel {
+        width: 80%;
+        height: 60%;
+        margin-left: 0vh;
+        margin-top: 2vh;
+      }
+
+      .contact-info {
+        font-size: 2vh;    
+    }
+
+    .contact-title {
+        font-size: 4vh;
+    }
+  }
+  @media only screen and (max-width: 450px){
+
+
+    .contact-info {
+        font-size: 1.5vh;    
+    }
+    .contact-info-panel {
+      margin-bottom: 10vh;
+    }
+    .textfields{
+      margin-left: 5vh;
+      width: 80%;
+      height: 30px;
+      border-radius: 5px;
+    }
+  
+    .small-field {
+      width: 100px;
+      height: 20px;
+      font-size: 17px; 
+    }
+  
+    .textfields-panel {
+      width: 80%;
+      height: 50%;
+      margin-left: 0vh;
+      margin-top: 2vh;
+    }
+  
+    .details-panel {
+      margin-left: 2vh;
+      display: flex;
+      justify-content: flex-start;
+    }
+  
+    .details-field {
+      margin-left: 0vh;
+    }
+  
+    .textfields{
+      margin-left: 2vh;
+    }
+  
+    .tarea-size {
+      width: 90%;
+      height: 30%;
+      margin-left: 2vh;
+    }
+
+    .send-button {
+        margin-left: 2vh;
+    }
+  
+  
+  }
+  @media only screen and (max-width: 365px){
+    .details-field {
+        width: 30%;
+        margin-left: 0vh;
+      }
+  }
+  
+
+  /**/
+  @keyframes fadeInFromAbove {
+    20% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInFromLeft {
+    20% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInFromBottom {
+    20% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInFromBottom {
+    20% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-first-in-from-above {
+    opacity: 0;
+    transform: translateY(-20%);
+    animation: fadeInFromAbove 0.7s ease-out forwards;
+}
+
+.fade-second-in-from-left {
+    opacity: 0;
+    transform: translateX(-20%);
+    animation: fadeInFromLeft 1s ease-out forwards;
+}
+
+.fade-third-in-from-bottom {
+    opacity: 0;
+    transform: translateY(20%);
+    animation: fadeInFromBottom 1.2s ease-out forwards;
+}
+
+.fade-fourth-in-from-right {
+    opacity: 0;
+    transform: translateY(20%);
+    animation: fadeInFromBottom 1.2s ease-out forwards;
+}
+
+
+
+/*-------------------------------Successful Panels and not------------------------------*/
+.successful-panel,
+.failed-panel {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* Adjust the blur radius as needed */
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust the background color and opacity */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  display: none;
+}
+
+
+.failed-holder,
+.success-holder {
+  position: relative;
+  width: 50vh;
+  height: 30vh;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+  border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+}
+
+.exit-panel {
+  position: absolute;
+  width: 100%;
+  height: 5%;
+  background-color: red;
+  display: flex;
+  justify-self: flex-end;
+  align-items: end;
+}
+.exit-button {
+  position: absolute;
+  width: 4vh;
+  height: 4vh;
+  top: 0%;
+  right: 0%;
+  z-index: 100;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+  border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+}
+.text-panel {
+  width: 100%;
+  height: 70%;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.success-text{  
+  font-family: Andale Mono, monospace;
+  margin-left: 2vh;
+  margin-right: 2vh;
+  font-weight: bold;
+  font-size: 3vh;
+}
+.okay-panel {
+  width: 100%;
+  height: 30%;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.okay-button {
+  height: 5vh;
+  width: 12vh;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 10px solid rgb(128, 128, 128); /* Add top border */
+  border-right: 10px solid rgb(104, 104, 104); /* Add right border */
+  font-family: Andale Mono, monospace;
+}
