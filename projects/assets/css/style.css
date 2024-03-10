@@ -571,7 +571,7 @@ p {
   }
   
   .about-title {
-    font-family: Andale Mono, monospace;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     font-size: 5vh;
     margin-top: 5vh;

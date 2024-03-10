@@ -42,7 +42,7 @@ const aboutMain = document.querySelector('.about-main');
 const servicesMain = document.querySelector('.services-main');
 const portfolioMain = document.querySelector('.portfolio-main');
 const contactMain = document.querySelector('.contact-main');
-
+const mobileButtons = document.querySelectorAll('.mobile-home-button, .mobile-about-button, .mobile-services-button, .mobile-portfolio-button, .mobile-contact-button');
 const desktopButtons = [
     { button: homeButton, main: homeMain },
     { button: aboutButton, main: aboutMain },
@@ -50,24 +50,6 @@ const desktopButtons = [
     { button: portfolioButton, main: portfolioMain },
     { button: contactButton, main: contactMain }
 ];
-
-desktopButtons.forEach(({ button, main }) => {
-    button.addEventListener('click', () => {
-        desktopButtons.forEach(({ button: btn, main: mainItem }) => {
-            btn.classList.remove('pressed');
-            mainItem.style.display = 'none';
-            if (mainItem.id === "homeMain") {
-                const item = 'home'
-            }            
-        });
-
-        button.classList.add('pressed');
-        main.style.display = 'flex';
-    });
-});
-
-//Mobile Devices
-const mobileButtons = document.querySelectorAll('.mobile-home-button, .mobile-about-button, .mobile-services-button, .mobile-portfolio-button, .mobile-contact-button');
 
 mobileButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -91,8 +73,28 @@ mobileButtons.forEach(button => {
         targetMain.style.display = 'flex'; // Assuming you want to show it as flex
 
         // Trigger click event on the corresponding desktop button
-        const desktopButton = document.getElementById(`${targetMainId.replace('-main', 'btnID')}`);
-        desktopButton.click();
+        desktopButtons.forEach(({ button: desktopButton, main: desktopMain }) => {
+            if (desktopMain.id === targetMainId.replace('-main', 'Main')) {
+                desktopButton.click();
+            }
+        });
+
+        // Auto-click the home button on mobile
+        if (button.classList.contains('mobile-home-button')) {
+            homeButton.click();
+        }
+    });
+});
+
+desktopButtons.forEach(({ button, main }) => {
+    button.addEventListener('click', () => {
+        desktopButtons.forEach(({ button: btn, main: mainItem }) => {
+            btn.classList.remove('pressed');
+            mainItem.style.display = 'none';
+        });
+
+        button.classList.add('pressed');
+        main.style.display = 'flex';
     });
 });
 
